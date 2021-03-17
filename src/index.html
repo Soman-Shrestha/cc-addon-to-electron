@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+      const {ipcRenderer} = require('electron')
+      function passdata() {
+        // alert('hello')
+        ipcRenderer.send('passtomain','data')
+      }
+    </script>
   </head>
   <body>
     <h1>💖 Hello World!</h1>
     <p>Welcome to your Electron application.</p>
+    <button id='btn' onclick='passdata()'>hello g</button>
+   
   </body>
+ 
 </html>
